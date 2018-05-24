@@ -259,7 +259,7 @@ function helloWorld(a, b, c) {}
 
       it('supports methods', () => {
         const doc = `  /**
-   * Baz
+   * @function Baz
    * @description Description
    *
    * @param {type} a Description
