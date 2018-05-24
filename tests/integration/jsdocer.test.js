@@ -7,6 +7,7 @@ describe('JS Docer', () => {
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @return {type} Description
  */`;
@@ -19,6 +20,7 @@ describe('JS Docer', () => {
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -35,6 +37,7 @@ describe('JS Docer', () => {
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} ab            Description
  * @param {type} longParameter Description
@@ -55,6 +58,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -75,6 +79,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -102,6 +107,7 @@ function helloWorld(a, b, c) {}
       const doc = `      /**
        * @function helloWorld
        * @description Description
+       * @access private | public
        *
        * @param {type} a Description
        * @param {type} b Description
@@ -119,6 +125,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @return {type} Description
  */`;
@@ -131,6 +138,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @return {type} Description
  */`;
@@ -143,6 +151,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @return {type} Description
  */`;
@@ -157,6 +166,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -173,6 +183,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -189,6 +200,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {string} [a=something] Description
  *
@@ -203,6 +215,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {object} Unknown   Description
  * @param {type}   Unknown.a Description
@@ -218,6 +231,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {object} Unknown       Description
  * @param {number} [Unknown.a=1] Description
@@ -233,6 +247,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type}  a Description
  * @param {array} b Description
@@ -261,6 +276,7 @@ function helloWorld(a, b, c) {}
         const doc = `  /**
    * @function Baz
    * @description Description
+   * @access private | public
    *
    * @param {type} a Description
    * @param {type} b Description
@@ -274,6 +290,7 @@ function helloWorld(a, b, c) {}
         const doc = `  /**
    * @static Qux
    * @description Description
+   * @access private | public
    *
    * @param {type} a Description
    * @param {type} b Description
@@ -291,6 +308,7 @@ function helloWorld(a, b, c) {}
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  *

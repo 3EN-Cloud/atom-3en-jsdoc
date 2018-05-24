@@ -10,6 +10,7 @@ describe('JSDoc renderer', () => {
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @return {type} Description
  */`;
@@ -27,6 +28,7 @@ describe('JSDoc renderer', () => {
       const doc = `/**
  * @function helloWorld
  * @description It says hello
+ * @access private | public
  *
  * @return {type} Description
  */`;
@@ -44,6 +46,7 @@ describe('JSDoc renderer', () => {
       const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @returns {type} Description
  */`;
@@ -60,6 +63,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} a Description
  *
@@ -77,6 +81,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {Object} a Description
  *
@@ -94,6 +99,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {Array} a Description
  *
@@ -114,6 +120,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {verylongtype} a            Description
  * @param {short}        verylongname Description
@@ -134,6 +141,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} [a=bob] Description
  *
@@ -153,6 +161,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} [a=false] Description
  *
@@ -172,6 +181,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} [a=null] Description
  *
@@ -191,6 +201,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @function helloWorld
  * @description Description
+ * @access private | public
  *
  * @param {type} p.a Description
  *
@@ -213,6 +224,7 @@ describe('JSDoc renderer', () => {
         const doc = `    /**
      * @function helloWorld
      * @description Description
+     * @access private | public
      *
      * @return {type} Description
      */`;
@@ -259,6 +271,7 @@ describe('JSDoc renderer', () => {
         const doc = `/**
  * @static helloStatic
  * @description Description
+ * @access private | public
  *
  * @return {type} Description
  */`;
