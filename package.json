@@ -1,8 +1,8 @@
 {
-  "name": "atom-easy-jsdoc",
+  "name": "atom-3en-jsdoc",
   "main": "./lib/index",
   "version": "4.12.5",
-  "description": "JSDoc style comments for javascript development",
+  "description": "JSDoc plugin for atom, used by 3EN for all SuiteScript projects",
   "activationCommands": {
     "atom-workspace": [
       "jsdoc:block"

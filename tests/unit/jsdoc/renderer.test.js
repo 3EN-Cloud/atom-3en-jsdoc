@@ -8,7 +8,8 @@ describe('JSDoc renderer', () => {
         type: 'function',
       };
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @return {type} Description
  */`;
@@ -24,7 +25,8 @@ describe('JSDoc renderer', () => {
         type: 'function',
       };
       const doc = `/**
- * helloWorld - It says hello
+ * @function helloWorld
+ * @description It says hello
  *
  * @return {type} Description
  */`;
@@ -40,7 +42,8 @@ describe('JSDoc renderer', () => {
       };
 
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @returns {type} Description
  */`;
@@ -55,7 +58,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  *
@@ -71,7 +75,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {Object} a Description
  *
@@ -87,7 +92,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {Array} a Description
  *
@@ -106,7 +112,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {verylongtype} a            Description
  * @param {short}        verylongname Description
@@ -125,7 +132,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} [a=bob] Description
  *
@@ -143,7 +151,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} [a=false] Description
  *
@@ -161,7 +170,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} [a=null] Description
  *
@@ -179,7 +189,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} p.a Description
  *
@@ -200,7 +211,8 @@ describe('JSDoc renderer', () => {
           type: 'function',
         };
         const doc = `    /**
-     * helloWorld - Description
+     * @function helloWorld
+     * @description Description
      *
      * @return {type} Description
      */`;
@@ -216,7 +228,8 @@ describe('JSDoc renderer', () => {
         };
 
         const doc = `/**
- * Foo - Description
+ * Foo
+ * @description Description
  */`;
         render(structure).should.equal(doc);
       });
@@ -229,7 +242,8 @@ describe('JSDoc renderer', () => {
         };
 
         const doc = `/**
- * Foo - Description
+ * Foo
+ * @description Description
  * @extends Bar
  */`;
         render(structure).should.equal(doc);
@@ -243,7 +257,8 @@ describe('JSDoc renderer', () => {
         };
 
         const doc = `/**
- * @static helloStatic - Description
+ * @static helloStatic
+ * @description Description
  *
  * @return {type} Description
  */`;

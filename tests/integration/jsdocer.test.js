@@ -5,7 +5,8 @@ describe('JS Docer', () => {
     it('should be able to create a comment without params', () => {
       const code = 'function helloWorld () {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @return {type} Description
  */`;
@@ -16,7 +17,8 @@ describe('JS Docer', () => {
     it('should be able to create a comment with params', () => {
       const code = 'function helloWorld (a, b, c) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -31,7 +33,8 @@ describe('JS Docer', () => {
     it('should line up parameter descriptions', () => {
       const code = 'function helloWorld(ab, longParameter, c) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} ab            Description
  * @param {type} longParameter Description
@@ -50,7 +53,8 @@ function somethingElse(d, e) {}
 function helloWorld(a, b, c) {}
 `;
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -69,7 +73,8 @@ function somethingElse(d, e) {}
 function helloWorld(a, b, c) {}
 `;
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -95,7 +100,8 @@ function helloWorld(a, b, c) {}
     it('with the same indentation as the function', () => {
       const code = '      function helloWorld(a, b, c) {}';
       const doc = `      /**
-       * helloWorld - Description
+       * @function helloWorld
+       * @description Description
        *
        * @param {type} a Description
        * @param {type} b Description
@@ -111,7 +117,8 @@ function helloWorld(a, b, c) {}
     it('should pick up the name from the variable name', () => {
       const code = 'var helloWorld = function () {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @return {type} Description
  */`;
@@ -122,7 +129,8 @@ function helloWorld(a, b, c) {}
     it('should pick up the name from the let variable', () => {
       const code = 'let helloWorld = function () {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @return {type} Description
  */`;
@@ -133,7 +141,8 @@ function helloWorld(a, b, c) {}
     it('should pick up the name from the const variable', () => {
       const code = 'const helloWorld = function () {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @return {type} Description
  */`;
@@ -146,7 +155,8 @@ function helloWorld(a, b, c) {}
     it('supports export', () => {
       const code = 'export function helloWorld(a, b, c) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -161,7 +171,8 @@ function helloWorld(a, b, c) {}
     it('supports default export', () => {
       const code = 'export default function helloWorld(a, b, c) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  * @param {type} b Description
@@ -176,7 +187,8 @@ function helloWorld(a, b, c) {}
     it('supports default values', () => {
       const code = 'function helloWorld(a = \'something\') {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {string} [a=something] Description
  *
@@ -189,7 +201,8 @@ function helloWorld(a, b, c) {}
     it('supports argument destructuring', () => {
       const code = 'function helloWorld({ a, b }) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {object} Unknown   Description
  * @param {type}   Unknown.a Description
@@ -203,7 +216,8 @@ function helloWorld(a, b, c) {}
     it('supports argument destructuring with defaults', () => {
       const code = 'function helloWorld({ a = 1, b }) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {object} Unknown       Description
  * @param {number} [Unknown.a=1] Description
@@ -217,7 +231,8 @@ function helloWorld(a, b, c) {}
     it('supports rest arguments', () => {
       const code = 'function helloWorld(a, ...b) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type}  a Description
  * @param {array} b Description
@@ -235,7 +250,8 @@ function helloWorld(a, b, c) {}
 
       it('supports definitions', () => {
         const doc = `/**
- * Foo - Description
+ * Foo
+ * @description Description
  * @extends Bar
  */`;
         comment(code, 1).content.should.equal(doc);
@@ -243,7 +259,8 @@ function helloWorld(a, b, c) {}
 
       it('supports methods', () => {
         const doc = `  /**
-   * Baz - Description
+   * Baz
+   * @description Description
    *
    * @param {type} a Description
    * @param {type} b Description
@@ -255,7 +272,8 @@ function helloWorld(a, b, c) {}
 
       it('supports static methods', () => {
         const doc = `  /**
-   * @static Qux - Description
+   * @static Qux
+   * @description Description
    *
    * @param {type} a Description
    * @param {type} b Description
@@ -271,7 +289,8 @@ function helloWorld(a, b, c) {}
     it('should use @returns when useReturns is enabled', () => {
       const code = 'function helloWorld(a) {}';
       const doc = `/**
- * helloWorld - Description
+ * @function helloWorld
+ * @description Description
  *
  * @param {type} a Description
  *
