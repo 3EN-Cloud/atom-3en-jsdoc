@@ -1,7 +1,7 @@
 {
   "name": "atom-3en-jsdoc",
   "main": "./lib/index",
-  "version": "4.13.2",
+  "version": "4.13.3",
   "description": "JSDoc plugin for atom, used by 3EN for all SuiteScript projects",
   "repository": "https://github.com/3EN-Cloud/atom-3en-jsdoc",
   "activationCommands": {
