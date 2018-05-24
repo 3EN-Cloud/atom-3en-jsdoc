@@ -1,5 +1,7 @@
 # Atom 3EN JSDoc package
 
+[![Build Status](https://travis-ci.com/3EN-Cloud/atom-3en-jsdoc.svg?branch=master)](https://travis-ci.com/3EN-Cloud/atom-3en-jsdoc)
+
 Atom package for quick jsdoc comment generation.
 
 ## Install
